@@ -1,3 +1,6 @@
+# Lineage Health
+persist.lineage.health.                 u:object_r:lineage_health_prop:s0
+
 # AOSPA build identity
 ro.aospa.                               u:object_r:aospa_build_prop:s0
 
