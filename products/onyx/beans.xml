@@ -7,7 +7,7 @@
   <include name="../platforms/sun.xml" />
 
   <!-- Device Dependencies -->
-  <project path="device/xiaomi/onyx" name="aospa-sm8735/android_device_xiaomi_onyx" remote="aospa" revision="calcite" />
+  <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="calcite" />
   <project path="device/xiaomi/onyx-kernel" name="aospa-sm8735/android_device_xiaomi_onyx-kernel" remote="aospa" revision="beryl" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
   <project path="hardware/xiaomi" name="aospa-sm8735/android_hardware_xiaomi" remote="aospa" revision="calcite" />
