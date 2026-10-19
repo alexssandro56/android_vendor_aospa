@@ -217,7 +217,7 @@ func (g *Module) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 				// sbox can only copy files, not directories, into the sandbox.
 				continue
 			}
-			g.inputDeps = append(g.inputDeps, android.PathForSourceRelaxed(ctx, path))
+			g.inputDeps = append(g.inputDeps, android.PathForSource(ctx, path))
 		}
 	}
 
