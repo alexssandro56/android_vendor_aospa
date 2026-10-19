@@ -4,15 +4,15 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest>
-  <project path="vendor/qcom/opensource/agm" name="LineageOS/android_vendor_qcom_opensource_agm" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="LineageOS/android_hardware_qcom_audio-ar" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/audio-hal/st-hal-ar" name="LineageOS/android_vendor_qcom_opensource_audio-hal_st-hal-ar" remote="aospa" revision="lineage-24.0" />
-  <project path="vendor/qcom/opensource/audioreach-graphservices" name="LineageOS/android_vendor_qcom_opensource_audioreach-graphservices" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/dataipa" name="LineageOS/android_vendor_qcom_opensource_dataipa" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/display-core" name="LineageOS/android_vendor_qcom_opensource_display-core" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/display-intf" name="LineageOS/android_vendor_qcom_opensource_display-intf" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="vendor/qcom/opensource/pal" name="LineageOS/android_vendor_qcom_opensource_arpal-lx" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="hardware/qcom/display" name="LineageOS/android_hardware_qcom_display" remote="aospa" revision="lineage-24.0-caf-sm8750" />
-  <project path="hardware/qcom/gps" name="xiaomi-8750/android_hardware_qcom_gps" remote="aospa" revision="beryl-8750" />
-  <project path="hardware/qcom/media" name="xiaomi-8750/android_hardware_qcom_media" remote="aospa" revision="beryl-8750" />
+  <project path="vendor/qcom/opensource/agm" name="xiaomi-8750/android_vendor_qcom_opensource_agm" remote="aospa" revision="beryl-8750" />
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="xiaomi-8750/android_hardware_qcom_audio" remote="aospa" revision="beryl-8750"/>
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="xiaomi-8750/android_vendor_qcom_opensource_audio-hal_st-hal" remote="aospa" revision="beryl-8750" />
+  <project path="vendor/qcom/opensource/audioreach-graphservices" name="xiaomi-8750/android_vendor_qcom_opensource_audioreach-graphservices" remote="aospa" revision="beryl-8750" />
+  <project path="vendor/qcom/opensource/dataipa" name="xiaomi-8750/android_vendor_qcom_opensource_dataipa" remote="aospa" revision="beryl-8750"/>
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="xiaomi-8750/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="aospa" revision="beryl-8750"/>
+  <project path="vendor/qcom/opensource/display-core" name="xiaomi-8750/android_vendor_qcom_opensource_display-core" remote="aospa" revision="beryl-8750"/>
+  <project path="vendor/qcom/opensource/display-intf" name="xiaomi-8750/android_vendor_qcom_opensource_display-intf" remote="aospa" revision="beryl-8750"/>
+  <project path="vendor/qcom/opensource/pal" name="xiaomi-8750/android_vendor_qcom_opensource_arpal-lx" remote="aospa" revision="beryl-8750"/>
+  <project path="hardware/qcom/gps" name="xiaomi-8750/android_hardware_qcom_gps" remote="aospa" revision="beryl-8750"/>
+  <project path="hardware/qcom/media" name="xiaomi-8750/android_hardware_qcom_media" remote="aospa" revision="beryl-8750"/>
 </manifest>
