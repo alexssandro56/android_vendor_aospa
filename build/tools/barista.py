@@ -167,9 +167,11 @@ def main():
                         0, Element("remove-project", attrib={"name": upstream_name})
                     )
 
-        existing = barista_manifest.find(f".//project[@path='{path}']")
-        if existing is None:
-            existing = barista_manifest.find(f".//project[@name='{path}']")
+        existing = None
+        for p in barista_manifest.findall("project"):
+            if p.get("path", p.get("name", "")) == path:
+                existing = p
+                break
 
         if existing is None:
             barista_manifest.append(project)
@@ -269,6 +271,15 @@ def main():
         brewable_projects = [
             path for path in mentioned_projects if not Path(path).exists()
         ]
+
+    # A removed ingredient's upstream project may not be in this checkout at all, and repo
+    # refuses to sync the whole list over one unknown path.
+    if brewable_projects and not skip_sync:
+        known = subprocess.run(
+            ["repo", "list", "--path-only"], capture_output=True, text=True
+        ).stdout.split()
+        if known:
+            brewable_projects = [path for path in brewable_projects if path in known]
 
     if brewable_projects and not skip_sync:
         print("Brewing the fresh ingredients.")
