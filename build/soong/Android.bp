@@ -5,11 +5,9 @@ bootstrap_go_package {
     pkgPath: "aospa/soong/generator",
     deps: [
         "blueprint",
-        "blueprint-pathtools",
         "blueprint-proptools",
         "soong",
         "soong-android",
-        "soong-shared",
     ],
     srcs: [
         "generator/generator.go",
