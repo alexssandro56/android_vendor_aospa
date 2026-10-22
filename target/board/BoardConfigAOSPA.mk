@@ -20,5 +20,12 @@ endif
 # Kernel configuration.
 include vendor/aospa/target/board/BoardConfigKernel.mk
 
+# Kernel built from source (build/tasks/kernel.mk).
+ifneq ($(TARGET_KERNEL_SOURCE),)
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+include vendor/aospa/target/board/BoardConfigKernelLineage.mk
+endif
+endif
+
 # Soong
 include vendor/aospa/target/board/BoardConfigSoong.mk
