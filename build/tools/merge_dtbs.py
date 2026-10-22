@@ -468,9 +468,9 @@ class MergedDeviceTree(object):
 		for mdt in self.merged_devicetrees:
 			yield mdt.save(name, out_dir)
 
-def find_symbol(dtbs, symbol):
+def find_symbol(dtbs, symbol, exclude=None):
 	for symbols, _, dt in dtbs:
-		if symbol in symbols:
+		if dt != exclude and symbol in symbols:
 			return dt
 
 def create_adjacency(dtbs):
@@ -478,8 +478,21 @@ def create_adjacency(dtbs):
 	for _, fixups, dt in dtbs:
 		graph[dt] = set()
 		for fixup in fixups:
-			graph[dt].add(find_symbol(dtbs, fixup))
+			graph[dt].add(find_symbol(dtbs, fixup, exclude=dt))
 	return graph
+
+def topological_order(graph):
+	# Labels are looked up by name, so a techpack for another platform that
+	# defines the same label can show up as a dependency and close a cycle
+	# (e.g. onyx and kera camera sensors). Those techpacks never apply to the
+	# same base anyway, so drop an edge of the cycle and try again.
+	while True:
+		try:
+			return list(graphlib.TopologicalSorter(graph).static_order())
+		except graphlib.CycleError as e:
+			cycle = e.args[1]
+			logging.warning('Breaking devicetree dependency cycle: {}'.format(' -> '.join(cycle)))
+			graph[cycle[1]].discard(cycle[0])
 
 def parse_tech_dt_files(folder):
 	dtbs = []
@@ -490,8 +503,7 @@ def parse_tech_dt_files(folder):
 				dt = DeviceTree(filepath)
 				dtbs.append((dt.list_props('/__symbols__'), dt.list_props('/__fixups__'), filepath))
 	graph = create_adjacency(dtbs)
-	ts = graphlib.TopologicalSorter(graph)
-	order = list(ts.static_order())
+	order = topological_order(graph)
 	devicetrees = []
 	for dt in order:
 		if dt: # Check the value is 'None'
