@@ -18,6 +18,8 @@
   <project path="device/qcom/kernelscripts" name="AOSPA/android_kernel_build" remote="aospa" />
   <project path="lineage/scripts" name="LineageOS/scripts" remote="aospa" revision="main" clone-depth="1" />
   <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" remote="aospa" revision="lineage-24.0" clone-depth="1" />
+  <!-- fdtput and fdtoverlaymerge, which kernel.mk needs to merge the dtbs -->
+  <project path="external/dtc" name="LineageOS/android_external_dtc" remote="aospa" revision="lineage-24.0" />
   <project path="hardware/xiaomi" name="alexssandro56/hardware_xiaomi" remote="aospa" revision="ccr-786c7be0-pn26hi" />
   <project path="packages/apps/LunarisDolby" name="unmoved21/packages_apps_LunarisDolby" remote="aospa" revision="16.0" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
