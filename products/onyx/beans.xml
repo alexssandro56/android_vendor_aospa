@@ -7,10 +7,13 @@
   <include name="../platforms/sun.xml" />
 
   <!-- Device Dependencies -->
-  <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="ccr-786c7be0-pn26hi" />
+  <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="ccr-oss-kernel" />
   <project path="device/xiaomi/onyx-miuicamera" name="unmoved21/android_device_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
-  <project path="device/xiaomi/onyx-kernel" name="aospa-sm8735/android_device_xiaomi_onyx-kernel" remote="aospa" revision="beryl" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
+  <project path="kernel/xiaomi/onyx" name="unmoved21/android_kernel_xiaomi_onyx" remote="aospa" revision="lineage-24.0" />
+  <project path="kernel/xiaomi/onyx-devicetrees" name="unmoved21/android_kernel_xiaomi_onyx-devicetrees" remote="aospa" revision="lineage-24.0" />
+  <project path="kernel/xiaomi/onyx-modules" name="unmoved21/android_kernel_xiaomi_onyx-modules" remote="aospa" revision="lineage-24.0" />
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="aosp" revision="main" clone-depth="1" />
   <project path="hardware/xiaomi" name="alexssandro56/hardware_xiaomi" remote="aospa" revision="ccr-786c7be0-pn26hi" />
   <project path="packages/apps/LunarisDolby" name="unmoved21/packages_apps_LunarisDolby" remote="aospa" revision="16.0" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
