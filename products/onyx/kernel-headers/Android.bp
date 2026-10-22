@@ -1,0 +1,122 @@
+//
+// SPDX-FileCopyrightText: Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// onyx builds its kernel from source. The header libraries the prebuilt kernel
+// used to provide live in the kernel/xiaomi/onyx-modules namespace, which
+// modules in the root namespace and in other device namespaces can't see.
+// Expose them here, in the root namespace, under the names the HALs use.
+
+cc_library_headers {
+    name: "qti_kernel_headers",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "generated_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+        "//kernel/xiaomi/onyx-modules:qti_display_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_ipa_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "generated_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+        "//kernel/xiaomi/onyx-modules:qti_display_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_ipa_kernel_headers",
+    ],
+}
+
+cc_library_headers {
+    name: "audio_kernel_headers",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "generated_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+    ],
+    export_header_lib_headers: [
+        "generated_kernel_headers",
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+    ],
+}
+
+cc_library_headers {
+    name: "libubwcp_headers",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_ubwcp_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_ubwcp_kernel_headers",
+    ],
+}
+
+cc_library_headers {
+    name: "qti_display_kernel_headers",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_display_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_display_kernel_headers",
+    ],
+}
+
+cc_library_headers {
+    name: "qti_audio_kernel_uapi",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_audio_kernel_uapi",
+    ],
+}
+
+cc_library_headers {
+    name: "qti_ipa_kernel_headers",
+    vendor: true,
+    recovery_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_ipa_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_ipa_kernel_headers",
+    ],
+}
+
+cc_library_headers {
+    name: "qti_synx_kernel_headers",
+    vendor_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_synx_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_synx_kernel_headers",
+    ],
+}
+
+cc_library_headers {
+    name: "smmu_proxy_uapi_header",
+    vendor_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:smmu_proxy_uapi_header",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:smmu_proxy_uapi_header",
+    ],
+}
+
+cc_library_headers {
+    name: "qti_nfc_kernel_headers",
+    vendor_available: true,
+    header_libs: [
+        "//kernel/xiaomi/onyx-modules:qti_nfc_kernel_headers",
+    ],
+    export_header_lib_headers: [
+        "//kernel/xiaomi/onyx-modules:qti_nfc_kernel_headers",
+    ],
+}
