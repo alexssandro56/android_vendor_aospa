@@ -11,11 +11,15 @@
 // Most of the techpack header libraries are vendor only, but the prebuilt ones
 // were vendor_available and some users (libudfps_extension.xiaomi, linked into
 // surfaceflinger) build for system. Use the genrules behind them instead.
+//
+// include/ holds the UAPI headers the prebuilt kernel shipped that neither the
+// GKI kernel nor the techpacks export (scsi/ufs, the msm_audio codec headers).
 
 cc_library_headers {
     name: "qti_kernel_headers",
     vendor_available: true,
     recovery_available: true,
+    export_include_dirs: ["include"],
     header_libs: [
         "generated_kernel_headers",
     ],
@@ -38,6 +42,7 @@ cc_library_headers {
     name: "audio_kernel_headers",
     vendor_available: true,
     recovery_available: true,
+    export_include_dirs: ["include"],
     header_libs: [
         "generated_kernel_headers",
     ],
