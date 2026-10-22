@@ -46,12 +46,13 @@ function showHelpAndExit {
         echo -e "${CLR_BLD_BLU}  -d, --delta           Generate a delta ota from the specified target_files zip${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -z, --imgzip          Generate fastboot flashable image zip from signed target_files${CLR_RST}"
         echo -e "${CLR_BLD_BLU}  -n, --version         Specify build minor version (number)${CLR_RST}"
+        echo -e "${CLR_BLD_BLU}  -g, --no-gapps        Build without Google apps (vanilla)${CLR_RST}"
         exit 1
 }
 
 # Setup getopt.
-long_opts="help,clean,installclean,repo-sync,variant:,build-type:,jobs:,module:,sign-keys:,pwfile:,backup-unsigned,delta:,imgzip,version:"
-getopt_cmd=$(getopt -o hcirv:t:j:m:s:p:bd:zn: --long "$long_opts" \
+long_opts="help,clean,installclean,repo-sync,variant:,build-type:,jobs:,module:,sign-keys:,pwfile:,backup-unsigned,delta:,imgzip,version:,no-gapps"
+getopt_cmd=$(getopt -o hcirv:t:j:m:s:p:bd:zn:g --long "$long_opts" \
             -n $(basename $0) -- "$@") || \
             { echo -e "${CLR_BLD_RED}\nError: Getopt failed. Extra args\n${CLR_RST}"; showHelpAndExit; exit 1;}
 
@@ -73,6 +74,7 @@ while true; do
         -d|--delta|d|delta) DELTA_TARGET_FILES="$2"; shift;;
         -z|--imgzip|img|imgzip) FLAG_IMG_ZIP=y;;
         -n|--version|n|version) AOSPA_USER_VERSION="$2"; shift;;
+        -g|--no-gapps|g|no-gapps) FLAG_NO_GAPPS=y;;
         --) shift; break;;
     esac
     shift
@@ -100,6 +102,15 @@ DIR_ROOT=$(pwd)
 if [ ! -d "$DIR_ROOT/vendor/aospa" ]; then
         echo -e "${CLR_BLD_RED}error: insane root directory ($DIR_ROOT)${CLR_RST}"
         exit 1
+fi
+
+# Build with or without Google apps. Always exported, so a vanilla build
+# doesn't leak into the next GApps one from the same shell.
+if [ "$FLAG_NO_GAPPS" = 'y' ]; then
+    export AOSPA_VANILLA=true
+    echo -e "${CLR_BLD_CYA}Building without Google apps (vanilla)${CLR_RST}"
+else
+    export AOSPA_VANILLA=false
 fi
 
 # Setup AOSPA variant if specified

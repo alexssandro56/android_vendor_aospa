@@ -94,8 +94,13 @@ PRODUCT_PACKAGES += \
     vendor.aospa.power-service
 
 # Google - GMS, Pixel, and Mainline Modules
+# AOSPA_VANILLA=true (./rom-build.sh -g) builds without Google apps.
+ifeq ($(AOSPA_VANILLA),true)
+$(call inherit-product, vendor/aospa/target/product/aospa-vanilla.mk)
+else
 $(call inherit-product, vendor/google/gms/config.mk)
 $(call inherit-product, vendor/google/pixel/config.mk)
+endif
 ifneq ($(TARGET_EXCLUDE_GMODULES), true)
 $(call inherit-product-if-exists, vendor/google/modules/build/mainline_modules.mk)
 endif

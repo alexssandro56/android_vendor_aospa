@@ -61,5 +61,10 @@ endif
 # Add BUILD_DATE for zip naming
 AOSPA_VERSION += $(AOSPA_BUILD)-$(BUILD_DATE)
 
+# Mark builds without Google apps
+ifeq ($(AOSPA_VANILLA),true)
+    AOSPA_VERSION += -vanilla
+endif
+
 # Remove unwanted characters for zip naming
 AOSPA_VERSION := $(shell echo -n $(AOSPA_VERSION) | tr -d '[:space:]')
