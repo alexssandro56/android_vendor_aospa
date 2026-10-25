@@ -8,7 +8,6 @@
 
   <!-- Device Dependencies -->
   <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="ccr-786c7be0-pn26hi" />
-  <project path="device/xiaomi/onyx-miuicamera" name="unmoved21/android_device_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
   <project path="device/xiaomi/onyx-kernel" name="aospa-sm8735/android_device_xiaomi_onyx-kernel" remote="aospa" revision="beryl" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
   <project path="hardware/xiaomi" name="alexssandro56/hardware_xiaomi" remote="aospa" revision="ccr-786c7be0-pn26hi" />
@@ -17,5 +16,5 @@
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
   <project path="vendor/extra" name="alexssandro56/android_vendor_extra" remote="aospa" revision="ccr-786c7be0-pn26hi" />
   <project path="vendor/xiaomi/onyx" name="alexssandro56/android_vendor_xiaomi_onyx-aospa" remote="aospa" revision="ccr-786c7be0-pn26hi" />
-  <project path="vendor/xiaomi/onyx-miuicamera" name="unmoved21/proprietary_vendor_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
+  <project path="vendor/xiaomi/onyx-leicacamera" name="xiaomi-onyx-playground/android_vendor_xiaomi_onyx-leicacamera" remote="aospa" revision="lineage-24.0" />
 </manifest>
