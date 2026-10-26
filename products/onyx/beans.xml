@@ -26,5 +26,6 @@
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
   <project path="vendor/extra" name="alexssandro56/android_vendor_extra" remote="aospa" revision="lineage-24.0" />
   <project path="vendor/xiaomi/onyx" name="alexssandro56/android_vendor_xiaomi_onyx-aospa" remote="aospa" revision="ccr-786c7be0-pn26hi" />
+  <project path="vendor/pixel/launcher" name="alexssandro56/android_vendor_extra" remote="aospa" revision="pixel-launcher" />
   <project path="vendor/xiaomi/onyx-leicacamera" name="xiaomi-onyx-playground/android_vendor_xiaomi_onyx-leicacamera" remote="aospa" revision="lineage-24.0" />
 </manifest>
