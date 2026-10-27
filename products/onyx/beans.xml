@@ -20,7 +20,6 @@
   <!-- fdtput and fdtoverlaymerge, which kernel.mk needs to merge the dtbs -->
   <project path="external/dtc" name="LineageOS/android_external_dtc" remote="aospa" revision="lineage-24.0" />
   <project path="hardware/xiaomi" name="alexssandro56/hardware_xiaomi" remote="aospa" revision="ccr-786c7be0-pn26hi" />
-  <project path="packages/apps/Spoofify" name="loonage/android_packages_apps_Spoofify" remote="aospa" revision="seventeen" />
   <project path="packages/apps/LunarisDolby" name="unmoved21/packages_apps_LunarisDolby" remote="aospa" revision="16.0" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
   <project path="vendor/extra" name="alexssandro56/android_vendor_extra" remote="aospa" revision="ccr-786c7be0-pn26hi" />
