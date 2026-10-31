@@ -9,6 +9,11 @@
   <!-- Device Dependencies -->
   <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="ccr-oss-kernel" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
+  <!-- device/qcom/common fork with penguin's tuna perf target (boosts + LM features) -->
+  <remove-project name="AOSPA/android_device_qcom_common" />
+  <project path="device/qcom/common" name="alexssandro56/android_device_qcom_common" remote="aospa" revision="ccr-786c7be0-pn26hi">
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
+  </project>
   <project path="kernel/xiaomi/onyx" name="alexssandro56/android_kernel_xiaomi_onyx" remote="aospa" revision="ccr-786c7be0-pn26hi" />
   <project path="kernel/xiaomi/onyx-devicetrees" name="alexssandro56/android_kernel_xiaomi_onyx-devicetrees" remote="aospa" revision="lineage-24.0" />
   <project path="kernel/xiaomi/onyx-modules" name="alexssandro56/android_kernel_xiaomi_onyx-modules" remote="aospa" revision="lineage-24.0" />
