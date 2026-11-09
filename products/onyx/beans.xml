@@ -7,7 +7,7 @@
   <include name="../platforms/sun.xml" />
 
   <!-- Device Dependencies -->
-  <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="ccr-oss-kernel" />
+  <project path="device/xiaomi/onyx" name="penguin-sm8735/android_device_xiaomi_onyx" remote="aospa" revision="celerity" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
   <!-- device/qcom/common fork with penguin's tuna perf target (boosts + LM features) -->
   <remove-project name="AOSPA/android_device_qcom_common" />
