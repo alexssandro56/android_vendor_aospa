@@ -7,7 +7,7 @@
   <include name="../platforms/sun.xml" />
 
   <!-- Device Dependencies: penguin-sm8735's consistent celerity set -->
-  <project path="device/xiaomi/onyx" name="penguin-sm8735/android_device_xiaomi_onyx" remote="aospa" revision="celerity" />
+  <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="celerity" />
   <project path="device/xiaomi/onyx-miuicamera" name="unmoved21/android_device_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
 
@@ -37,6 +37,11 @@
   <project path="vendor/xiaomi/onyx" name="penguin-sm8735/android_vendor_xiaomi_onyx-aospa" remote="aospa" revision="celerity" />
   <project path="vendor/xiaomi/onyx-miuicamera" name="unmoved21/proprietary_vendor_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
 
+  <!-- Open-source Xiaomi thermal daemon (mi_thermal_engine) -->
+  <project path="hardware/xiaomi/mithermald" name="IRedDragonICY/mithermald" remote="aospa" revision="main" />
+
   <!-- Packages -->
   <project path="packages/apps/LunarisDolby" name="unmoved21/packages_apps_LunarisDolby" remote="aospa" revision="16.0" />
+  <!-- Pentas game sidebar: writes the thermal-profile sconfig -->
+  <project path="packages/apps/Pentas" name="aospa-shadedark/android_packages_apps_Pentas" remote="aospa" revision="calcite" />
 </manifest>
