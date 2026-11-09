@@ -14,7 +14,7 @@
   <project path="device/qcom/common" name="alexssandro56/android_device_qcom_common" remote="aospa" revision="ccr-786c7be0-pn26hi">
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk" />
   </project>
-  <project path="kernel/xiaomi/onyx" name="alexssandro56/android_kernel_xiaomi_onyx" remote="aospa" revision="ccr-786c7be0-pn26hi" />
+  <project path="kernel/xiaomi/onyx" name="alexssandro56/android_kernel_xiaomi_onyx" remote="aospa" revision="lineage-24.0" />
   <project path="kernel/xiaomi/onyx-devicetrees" name="alexssandro56/android_kernel_xiaomi_onyx-devicetrees" remote="aospa" revision="lineage-24.0" />
   <project path="kernel/xiaomi/onyx-modules" name="alexssandro56/android_kernel_xiaomi_onyx-modules" remote="aospa" revision="lineage-24.0" />
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" remote="aosp" revision="main" clone-depth="1" />
