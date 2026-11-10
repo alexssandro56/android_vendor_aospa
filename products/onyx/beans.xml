@@ -8,7 +8,6 @@
 
   <!-- Device Dependencies: penguin-sm8735's consistent celerity set -->
   <project path="device/xiaomi/onyx" name="alexssandro56/android_device_xiaomi_onyx" remote="aospa" revision="celerity" />
-  <project path="device/xiaomi/onyx-miuicamera" name="unmoved21/android_device_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
   <project path="device/xiaomi/sepolicy" name="aospa-sm8735/android_device_xiaomi_sepolicy" remote="aospa" revision="calcite" />
 
   <!-- device/qcom/common: penguin's fork with the tuna perf target -->
@@ -35,7 +34,9 @@
   <!-- Vendor -->
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="aospa" revision="celerity" />
   <project path="vendor/xiaomi/onyx" name="penguin-sm8735/android_vendor_xiaomi_onyx-aospa" remote="aospa" revision="celerity" />
-  <project path="vendor/xiaomi/onyx-miuicamera" name="unmoved21/proprietary_vendor_xiaomi_onyx-miuicamera" remote="aospa" revision="lineage-24.0" />
+  <!-- Leica MIUI camera: the one device/xiaomi/onyx inherits (onyx-leicacamera-vendor.mk).
+       MiuiCamera.apk is stored in Git LFS, so run "git lfs pull" in this project after syncing. -->
+  <project path="vendor/xiaomi/onyx-leicacamera" name="xiaomi-onyx-playground/android_vendor_xiaomi_onyx-leicacamera" remote="aospa" revision="lineage-24.0" />
 
   <!-- Open-source Xiaomi thermal daemon (mi_thermal_engine) -->
   <project path="hardware/xiaomi/mithermald" name="IRedDragonICY/mithermald" remote="aospa" revision="main" />
