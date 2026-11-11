@@ -38,11 +38,8 @@
        MiuiCamera.apk is stored in Git LFS, so run "git lfs pull" in this project after syncing. -->
   <project path="vendor/xiaomi/onyx-leicacamera" name="xiaomi-onyx-playground/android_vendor_xiaomi_onyx-leicacamera" remote="aospa" revision="lineage-24.0" />
 
-  <!-- Open-source Xiaomi thermal daemon (mi_thermal_engine) -->
-  <project path="hardware/xiaomi/mithermald" name="IRedDragonICY/mithermald" remote="aospa" revision="main" />
-
   <!-- Packages -->
   <project path="packages/apps/LunarisDolby" name="unmoved21/packages_apps_LunarisDolby" remote="aospa" revision="16.0" />
-  <!-- Pentas game sidebar: writes the thermal-profile sconfig -->
+  <!-- Pentas game sidebar -->
   <project path="packages/apps/Pentas" name="aospa-shadedark/android_packages_apps_Pentas" remote="aospa" revision="calcite" />
 </manifest>
